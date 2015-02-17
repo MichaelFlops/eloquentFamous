@@ -1,6 +1,10 @@
 #famous node
 > E.g. Seed project to get started with Famo.us.
 
+Mike's note:
+  This is an attempt of applying two things: the Famous javascript physics framework + the concepts and exercises written in the book Eloquent Javascript, edition 2.
+  I've been going through the book and decided to start famousfying the exercises to make them look sexier. 
+
 [![Build Status](https://travis-ci.org/michaelflops/famous-node.svg?branch=master)](https://travis-ci.org/michaelflops/famous-node) [![Dependency Status](https://david-dm.org/michaelflops/famous-node.svg)](https://david-dm.org/michaelflops/famous-node) [![devDependency Status](https://david-dm.org/michaelflops/famous-node/dev-status.svg)](https://david-dm.org/michaelflops/famous-node#info=devDependencies)
 
 ##Dependencies
