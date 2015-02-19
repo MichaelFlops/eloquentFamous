@@ -280,26 +280,100 @@ define(function(require, exports, module) {
     // is to be counted ( rather that counting only "B" chars)
     // Rewrite countBs to make use of this new fx.
 
-    var countBs = function(string) {
-        var outputBs = 0;
-        var i;
-        for (i=0; i<string.length-1; i++)
-            if (string.charAt(i) == "B")
-                outputBs += 1;
-                return outputBs; 
+    // var countBs = function(string) {
+    //     var outputBs = 0;
+    //     var i;
+    //     for (i=0; i<string.length-1; i++)
+    //         if (string.charAt(i) == "B")
+    //             outputBs += 1;
+    //             return outputBs; 
+    // }
+    // // console.log(countBs("BBBC"));
+
+
+    // var countChar = function(string, letter) {
+    //     var outputCount = 0;
+    //      for (var i =0; i < string.length; i++) {
+    //         if (string.charAt(i) == letter)
+    //             outputCount += 1;
+    //      };
+    //      return outputCount;     
+    //  }
+    //  console.log(countChar("dinodinoddd", "d"));
+
+    // write a 'range' fx that takes 2 args (start and end), and returns
+    // an array containing all of the numbers (including end).
+
+    /*
+    var range = function(start, end) {
+        var outputRange = [];
+        for (var i = start; i <= end; i++) {
+            outputRange.push(i);
+        }
+            return outputRange;
+        // console.log(outputRange);
     }
-    // console.log(countBs("BBBC"));
+    console.log(range(1, 10));
+    */
 
+    // var fizzBuzz = function() {
+    //     for (var i = 1; i <=100; i++) {
+    //         if (i % 3 == 0 && i % 5 == 0)
+    //             console.log("fizzbuzz");
+    //         else if (i % 3 == 0)
+    //             console.log("fizz");
+    //         else if (i % 5 == 0)
+    //             console.log("buzz");
+    //         else
+    //             console.log(i);
+    //     }
+    // }
+    // fizzBuzz();
 
-    var countChar = function(string, letter) {
-        var outputCount = 0;
-         for (var i =0; i < string.length; i++) {
-            if (string.charAt(i) == letter)
-                outputCount += 1;
-         };
-         return outputCount;     
-     }
-     console.log(countChar("dinodinoddd", "d"));
+    var range = function(start, end, step) {
+        var outputRange = [];
+        if (step === undefined) {
+            for (var x=start; x<=end; x++)
+                outputRange.push(x);
+        } else {        
+            for(var i=start; i<=end; i+=step) {
+                outputRange.push(i);    
+            }
+        }
+        return outputRange;
+    }
+    // console.log(range(1, 10));
+
+    var sum = function(range) {
+        var sumOfArray = 0;
+        for (var i=0; i<range.length; i++) {
+            sumOfArray += range[i];
+        }
+        return sumOfArray;
+    }
+    // console.log(sum(range(1, 10)));
+
+// arrayValue = ["A", "B", "C", "D", "E", "F", "G"];
+
+    var reverseArray = function(start, end) {
+        var outputArray = [];
+        for (var i=Array.length-1; i>=0; i--) {
+            outputArray.push(i);
+        }
+        return outputArray;
+    }
+    // console.log(reverseArray(1, 10));
+    var reverseArrayInPlace = function(start, end) {
+        var outputArray = [];
+        start = end;
+        end = start;
+        for (var i=start; i<=end; i++){
+            outputArray.push(i);
+        }
+        return outputArray;
+    }
+    console.log(reverseArray(["A", "B", "C", "D", "E", "F", "G"]));
+    console.log(reverseArray(1, 10));
 });
 
 
